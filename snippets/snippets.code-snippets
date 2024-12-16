@@ -1,0 +1,10 @@
+{
+  "ProFormSelect": {
+    "prefix": [
+      "a-pfs",
+      "pfs"
+    ],
+    "body": "<ProFormSelect label=\"${1}\" name=\"${2}\" options={[${3}]} rules={[${4}]}></ProFormSelect>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormSelect"
+  }
+}
