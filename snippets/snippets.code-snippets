@@ -6,5 +6,281 @@
     ],
     "body": "<ProFormSelect label=\"${1}\" name=\"${2}\" options={[${3}]} rules={[${4}]}></ProFormSelect>;\n",
     "description": "快速创建一个配置了基本字段的ProFormSelect"
-  }
+  },
+  "ProFormText": {
+    "prefix": [
+      "a-pft",
+      "pft"
+    ],
+    "body": "<ProFormText label=\"${1}\" name=\"${2}\" rules={[${3}]}></ProFormText>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormText"
+  },
+  "ProFormDigit": {
+    "prefix": [
+      "a-pfd",
+      "pfd"
+    ],
+    "body": "<ProFormDigit label=\"${1}\" name=\"${2}\" rules={[${3}]}></ProFormDigit>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormDigit(数字输入框)"
+  },
+  "ProFormTextArea": {
+    "prefix": [
+      "a-pfta",
+      "pfta"
+    ],
+    "body": "<ProFormTextArea\n  label=\"${1}\"\n  name=\"${2}\"\n  rules={[${3}]}\n  fieldProps={{\n    maxLength: 50,\n  }}\n></ProFormTextArea>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormTextArea(文本域)"
+  },
+  "ProFormDatePicker": {
+    "prefix": [
+      "a-pfdp",
+      "pfdp"
+    ],
+    "body": "<ProFormDatePicker label=\"${1}\" name=\"${2}\" rules={[${3}]}></ProFormDatePicker>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormDatePicker(日期选择器)"
+  },
+  "ProFormDateTimePicker": {
+    "prefix": [
+      "a-pfdtp",
+      "pfdtp"
+    ],
+    "body": "<ProFormDateTimePicker label=\"${1}\" name=\"${2}\" rules={[${3}]}></ProFormDateTimePicker>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormDateTimePicker(日期时间选择器)"
+  },
+  "ProFormTimePicker": {
+    "prefix": [
+      "a-pftp",
+      "pftp"
+    ],
+    "body": "<ProFormTimePicker label=\"${1}\" name=\"${2}\" rules={[${3}]}></ProFormTimePicker>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormTimePicker(时间选择器)"
+  },
+  "ProFormCascader": {
+    "prefix": [
+      "a-pfc",
+      "pfc"
+    ],
+    "body": "<ProFormCascader label=\"${1}\" name=\"${2}\" rules={[${3}]}></ProFormCascader>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormCascader(级联选择器)"
+  },
+  "ProFormCheckbox": {
+    "prefix": [
+      "a-pfc",
+      "pfc"
+    ],
+    "body": "<ProFormCheckbox label=\"${1}\" name=\"${2}\" rules={[${3}]}></ProFormCheckbox>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormCheckbox(复选框)"
+  },
+  "ProFormRadio": {
+    "prefix": [
+      "a-pfr",
+      "pfr"
+    ],
+    "body": "<ProFormRadio label=\"${1}\" name=\"${2}\" rules={[${3}]}></ProFormRadio>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormRadio(单选框)"
+  },
+  "ProFormDateRangePicker": {
+    "prefix": [
+      "a-pfrdp",
+      "pfrdp"
+    ],
+    "body": "<ProFormDateRangePicker label=\"${1}\" name=\"${2}\" rules={[${3}]}></ProFormDateRangePicker>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormDateRangePicker(日期范围选择器)"
+  },
+  "ProFormList": {
+    "prefix": [
+      "a-pfl",
+      "pfl"
+    ],
+    "body": "<ProFormList name=\"${1}\" rules={[${2}]}>\n  {(dataInfo, index, action, count) => {\n    return <${3}>${4}</$>;\n  }}\n</ProFormList>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormList(列表)"
+  },
+  "ProFormItem": {
+    "prefix": [
+      "a-pfi",
+      "pfi"
+    ],
+    "body": "<ProFormItem label=\"${1}\" name=\"${2}\" rules={[${3}]}></ProFormItem>;\n",
+    "description": "快速创建一个配置了基本字段的ProFormItem(表单项)"
+  },
+  "Create A Component": {
+    "prefix": [
+      "cmp"
+    ],
+    "body": "const Component: React.FC = () => {\n  return <div></div>;\n};\n\nexport default Component;\n",
+    "description": "快速创建一个React组件"
+  },
+  "Create A Memo Component": {
+    "prefix": [
+      "cmpm"
+    ],
+    "body": "import { memo } from 'react';\n\nconst Component: React.FC = memo(() => {\n  return <div>${1}</div>;\n});\n\nexport default Component;\n",
+    "description": "快速创建一个React memo组件"
+  },
+  "ModalForm": {
+    "prefix": [
+      "a-mf",
+      "mf"
+    ],
+    "body": "import { ModalForm } from '@ant-design/pro-components';\nimport { forwardRef, useImperativeHandle, useState } from 'react';\ntype ModalFormRef = {\n  show: () => void;\n};\nconst ${1:Component}: React.FC = forwardRef((props, ref) => {\n  const [visible, setVisible] = useState<boolean>(false);\n  useImperativeHandle(\n    ref,\n    () =>\n      ({\n        show: () => {\n          setVisible(true);\n        },\n      } as ModalFormRef),\n  );\n  return (\n    <ModalForm\n      title=\"\"\n      width={800}\n      modalProps={{\n        destroyOnClose: true,\n        maskClosable: false,\n      }}\n      open={visible}\n      onOpenChange={setVisible}\n    ></ModalForm>\n  );\n});\n\nexport default ${2:Component};\n",
+    "description": "快速创建一个含有基本配置的ModalForm组件"
+  },
+  "DrawerForm": {
+    "prefix": [
+      "a-df",
+      "df"
+    ],
+    "body": "import { DrawerForm } from '@ant-design/pro-components';\nimport { forwardRef, useImperativeHandle, useState } from 'react';\ntype ModalFormRef = {\n  show: () => void;\n};\nconst ${1:Component}: React.FC = forwardRef((props, ref) => {\n  const [visible, setVisible] = useState<boolean>(false);\n  useImperativeHandle(\n    ref,\n    () =>\n      ({\n        show: () => {\n          setVisible(true);\n        },\n      } as ModalFormRef),\n  );\n  return (\n    <DrawerForm\n      title=\"\"\n      width={800}\n      drawerProps={{\n        destroyOnClose: true,\n        maskClosable: false,\n      }}\n      open={visible}\n      onOpenChange={setVisible}\n    ></DrawerForm>\n  );\n});\n\nexport default ${2:Component};\n",
+    "description": "快速创建一个含有基本配置的DrawerForm组件"
+  },
+  "Arrow Function": {
+    "prefix": [
+      "afn"
+    ],
+    "body": "const ${1:fn} = (${2}) => {${3}};\n",
+    "description": "快速创建一个箭头函数"
+  },
+  "Create A Function": {
+    "prefix": [
+      "fn"
+    ],
+    "body": "function ${1:fn}(${2}) {${3}}\n",
+    "description": "快速创建一个函数"
+  },
+  "Export Arrow Function": {
+    "prefix": [
+      "eafn"
+    ],
+    "body": "export const ${1:fn} = (${2}) => {${3}};\n",
+    "description": "快速创建一个导出的箭头函数"
+  },
+  "Export Function": {
+    "prefix": [
+      "efn"
+    ],
+    "body": "export function ${1:fn}(${2}) {${3}}\n",
+    "description": "快速创建一个导出的函数"
+  },
+  "Create A Hook": {
+    "prefix": [
+      "ahk"
+    ],
+    "body": "import { useState } from 'react';\n\nconst use${1:AHooks} = () => {\n  const [${2:temp}, set${3:Temp}] = useState<${4}>();\n  return {${5}};\n};\n\nexport default useAHooks;\n",
+    "description": "快速创建一个React Hook"
+  },
+  "Create A Columns Hook": {
+    "prefix": [
+      "a-clhk",
+      "clhk"
+    ],
+    "body": "const use${1:Some}Columns = () => {\n  const columns: TableColumnsType = [${3}];\n  return columns;\n};\n\nexport default use${2:Some}Columns;\n",
+    "description": "快速创建一个Antd的Columns Hook, 用于抽离列配置"
+  },
+  "Create A Columns Item": {
+    "prefix": [
+      "a-cli",
+      "cli"
+    ],
+    "body": "{\n  title:'${1}',\n  dataIndex:'${2}',\n  width:${3} ,\n}",
+    "description": "快速创建一个Antd的Columns的基础配置项"
+  },
+  "Create A Columns Item With Render": {
+    "prefix": [
+      "a-clir",
+      "clir"
+    ],
+    "body": "{\n  title:'${1}',\n  dataIndex:'${2}',\n  width:${3} ,\n  render:(value,record)=>{\n    return <div key={record.${4:id}}>${5}</div>\n  }\n}",
+    "description": "快速创建一个Antd的Columns的自定义渲染配置项"
+  },
+  "Create A Page": {
+    "prefix": [
+      "cap"
+    ],
+    "body": "import {\n  McContainer,\n  McContainerRef,\n  McInput,\n  McSelect,\n} from '@zykj2024/much-library';\nimport { Button } from 'antd';\nimport { useRef } from 'react';\n\nconst ${1:PageName}: React.FC = () => {\n  const queryItems = (\n    <>\n      <McInput label=\"\" name=\"\"></McInput>\n      <McSelect label=\"\" name=\"\"></McSelect>\n    </>\n  );\n\n  const actionBar = (\n    <>\n      <Button type=\"primary\" onClick={() => {}}>\n        按钮\n      </Button>\n    </>\n  );\n  const mcContainerRef = useRef<McContainerRef>();\n  return (\n    <McContainer\n      ref={mcContainerRef}\n      queryItems={queryItems}\n      actionBar={actionBar}\n      tableProps={{}}\n    ></McContainer>\n  );\n};\n\nexport default ${2:PageName};\n",
+    "description": "快速创建一个页面"
+  },
+  "Array Map": {
+    "prefix": [
+      "map"
+    ],
+    "body": "?.map((item)=>{${1}})",
+    "description": "快速创建一个Array Map调用"
+  },
+  "Array Filter": {
+    "prefix": [
+      "filter"
+    ],
+    "body": "?.filter((item)=>{${1}})",
+    "description": "快速创建一个Array Filter调用"
+  },
+  "Array Reduce": {
+    "prefix": [
+      "reduce"
+    ],
+    "body": "?.reduce((item)=>{${1}})",
+    "description": "快速创建一个Array Reduce调用"
+  },
+  "Array ForEach": {
+    "prefix": [
+      "forEach"
+    ],
+    "body": "?.forEach((item)=>{${1}})",
+    "description": "快速创建一个Array ForEach调用"
+  },
+  "Array Find": {
+    "prefix": [
+      "find"
+    ],
+    "body": "?.find((item)=>{${1}})",
+    "description": "快速创建一个Array Find调用"
+  },
+  "Array FindIndex": {
+    "prefix": [
+      "findIndex"
+    ],
+    "body": "?.findIndex((item)=>{${1}})",
+    "description": "快速创建一个Array FindIndex调用"
+  },
+  "Array Every": {
+    "prefix": [
+      "every"
+    ],
+    "body": "?.every((item)=>{${1}})",
+    "description": "快速创建一个Array Every调用"
+  },
+  "Array Some": {
+    "prefix": [
+      "some"
+    ],
+    "body": "?.some((item)=>{${1}})",
+    "description": "快速创建一个Array Some调用"
+  },
+  "Array Includes": {
+    "prefix": [
+      "includes"
+    ],
+    "body": "?.includes(${1})",
+    "description": "快速创建一个Array Includes调用"
+  },
+  "Return A Promise": {
+    "prefix": [
+      "rtp"
+    ],
+    "body": "return new Promise((resolve,reject)=>{${1}})",
+    "description": "快速创建一个Promise"
+  },
+  "Create Handle": {
+    "prefix": [
+      "chd"
+    ],
+    "body": "const handle${1:Some} = async (e) => {\n  ${2}\n};\n",
+    "description": "快速创建一个Handle"
+  },
+  "useAsync": {
+    "prefix": [
+      "uas"
+    ],
+    "body": "const { data, loading, run } = useAsync(${1:async () => {}}, {\n  manual: true,\n});\n",
+    "description": "快速创建一个useAsync"
+  },
 }
