@@ -1,8 +1,10 @@
 {
   "name": "antd-react-snippets",
   "displayName": "antd-react-snippets",
+  "author": "MengYu Liu",
   "description": "",
   "version": "0.0.1",
+  "icon": "public/logo.png",
   "engines": {
     "vscode": "^1.96.0"
   },
