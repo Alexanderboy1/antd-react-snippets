@@ -1,7 +1,7 @@
 {
   "name": "antd-react-snippets",
   "displayName": "antd-react-snippets",
-  "author": "MengYu Liu",
+  "publisher": "MengYu Liu",
   "description": "",
   "version": "0.0.1",
   "icon": "public/logo.png",
@@ -16,7 +16,17 @@
       {
         "language": "typescript",
         "path": "./snippets/snippets.code-snippets"
+      },{
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      },{
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      },{
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.code-snippets"
       }
     ]
   }
+  
 }
